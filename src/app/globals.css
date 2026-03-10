@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --soft-white: #fafbfc;
+  --soft-grey: #f1f3f5;
+  --soft-blue: #e3f2fd;
+  --accent-blue: #42a5f5;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-slate-800 bg-soft-white;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  overflow-x: hidden;
+}

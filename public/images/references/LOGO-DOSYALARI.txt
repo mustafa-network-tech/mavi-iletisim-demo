@@ -1,0 +1,11 @@
+Referans kartlarında arka planda görünecek logo dosyalarını bu klasöre ekleyin.
+Dosya adları (PNG veya JPG):
+
+  mk-digital-systems.png   → MK Digital Systems
+  mk-field-ops.png         → M.K. Field Ops
+  mavi-kartus.png          → Mavi Kartuş
+  kadraj-rotam.png         → Kadraj Rotam
+  siir-dunyasi.png         → Şiir Dünyası
+  mavi-iletisim.png        → Mavi İletişim
+
+Dosya yoksa kartta yalnızca referans adı görünür.
