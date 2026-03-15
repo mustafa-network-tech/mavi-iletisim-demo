@@ -12,13 +12,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: 'Mavi İletişim | Teknoloji, Güven ve Profesyonel Hizmet',
+  title: 'MK Digital Systems | Mustafa Öner — Teknoloji, Güven ve Profesyonel Hizmet',
   description:
-    'Mavi İletişim - Cep telefonu, bilgisayar, tablet ve network ürünleri. Teknik servis, tamir ve kurumsal destek hizmetleri.',
-  keywords: 'teknoloji, teknik servis, telefon tamiri, bilgisayar onarım, tablet, iletişim',
+    'MK Digital Systems — Teknoloji, güven ve profesyonel hizmet. Cep telefonu, bilgisayar, tablet ve network ürünleri. Teknik servis ve kurumsal destek.',
+  keywords: 'MK Digital Systems, Mustafa Öner, teknoloji, teknik servis, telefon tamiri, bilgisayar onarım, tablet, iletişim',
   openGraph: {
-    title: 'Mavi İletişim',
-    description: 'Teknoloji, Güven ve Profesyonel Hizmet',
+    title: 'MK Digital Systems',
+    description: 'Teknoloji, Güven ve Profesyonel Hizmet — Mustafa Öner',
   },
 };
 
