@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '@/components/cart/CartContext';
+import ThemeToggle from '@/components/theme/ThemeToggle';
 
 const LINKS = [
   { label: 'Ana Sayfa', href: '/' },
@@ -29,12 +30,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        scrolled ? 'bg-white/95 dark:bg-slate-900/95 shadow-md backdrop-blur-sm' : 'bg-transparent dark:bg-transparent'
       }`}
     >
       <nav className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-18">
-          <Link href="/" className="text-xl font-bold text-mavi-dark tracking-tight">
+          <Link href="/" className="text-xl font-bold text-mavi-dark dark:text-mavi-light tracking-tight">
             Mavi İletişim
           </Link>
 
@@ -44,7 +45,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="px-3 py-2 rounded-lg text-slate-600 hover:text-mavi-dark hover:bg-soft-blue/50 text-sm font-medium transition-colors"
+                  className="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:text-mavi-dark dark:hover:text-mavi-light hover:bg-soft-blue/50 dark:hover:bg-slate-700 text-sm font-medium transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -53,15 +54,16 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             {/* Sepet ikonu – her zaman sağ üstte, tıklanınca /sepet sayfasına gider */}
             <Link
               href="/sepet"
-              className="flex items-center gap-2 px-3 py-2 rounded-full bg-soft-grey/80 border border-slate-200 hover:bg-soft-blue/50 hover:border-mavi/30 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-full bg-soft-grey/80 dark:bg-slate-700/80 border border-slate-200 dark:border-slate-600 hover:bg-soft-blue/50 dark:hover:bg-slate-600 hover:border-mavi/30 transition-colors"
               aria-label="Sepeti görüntüle"
             >
               <span className="relative inline-flex">
                 <svg
-                  className="w-5 h-5 text-mavi-dark"
+                  className="w-5 h-5 text-mavi-dark dark:text-mavi-light"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -79,7 +81,7 @@ export default function Navbar() {
                   </span>
                 )}
               </span>
-              <span className="hidden sm:inline text-sm font-medium text-slate-700">
+              <span className="hidden sm:inline text-sm font-medium text-slate-700 dark:text-slate-300">
                 Sepet {totalCount > 0 && `(${totalCount})`}
               </span>
             </Link>
@@ -88,7 +90,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setOpen((o) => !o)}
-              className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-soft-grey"
+              className="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-soft-grey dark:hover:bg-slate-700"
               aria-label="Menüyü aç"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +112,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-white border-t border-slate-200 shadow-lg overflow-hidden"
+            className="md:hidden bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 shadow-lg overflow-hidden"
           >
             <ul className="px-4 py-4 space-y-1">
               {LINKS.map((link) => (
@@ -118,7 +120,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 rounded-lg text-slate-600 hover:bg-soft-blue/50 hover:text-mavi-dark font-medium"
+                    className="block px-4 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-soft-blue/50 dark:hover:bg-slate-700 hover:text-mavi-dark dark:hover:text-mavi-light font-medium"
                   >
                     {link.label}
                   </Link>
@@ -128,7 +130,7 @@ export default function Navbar() {
                 <Link
                   href="/sepet"
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-mavi-dark hover:bg-soft-blue/50 font-medium"
+                  className="block px-4 py-3 rounded-lg text-mavi-dark dark:text-mavi-light hover:bg-soft-blue/50 dark:hover:bg-slate-700 font-medium"
                 >
                   Sepet {totalCount > 0 && `(${totalCount})`}
                 </Link>

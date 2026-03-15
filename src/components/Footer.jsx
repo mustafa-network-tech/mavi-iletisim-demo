@@ -33,21 +33,21 @@ function SocialIcon({ icon }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-100 border-t border-slate-200">
+    <footer className="bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
       <div className="container-wide mx-auto section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div className="lg:col-span-2">
-            <h3 className="text-lg font-bold text-mavi-dark mb-3">Mavi İletişim</h3>
-            <p className="text-slate-600 text-sm leading-relaxed max-w-md">
+            <h3 className="text-lg font-bold text-mavi-dark dark:text-mavi-light mb-3">Mavi İletişim</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-md">
               Teknoloji satışı ve teknik servis alanında yılların deneyimi ile müşterilerimize güvenilir çözümler sunuyoruz. Cep telefonu, bilgisayar, tablet ve kurumsal altyapı ürünlerinde tek adresiniz.
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-slate-800 uppercase tracking-wider mb-4">Hızlı Bağlantılar</h4>
+            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-4">Hızlı Bağlantılar</h4>
             <ul className="space-y-2">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-slate-600 hover:text-mavi-dark text-sm transition-colors">
+                  <a href={link.href} className="text-slate-600 dark:text-slate-400 hover:text-mavi-dark dark:hover:text-mavi-light text-sm transition-colors">
                     {link.label}
                   </a>
                 </li>
@@ -55,14 +55,14 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-slate-800 uppercase tracking-wider mb-4">İletişim</h4>
-            <ul className="space-y-3 text-slate-600 text-sm">
+            <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-4">İletişim</h4>
+            <ul className="space-y-3 text-slate-600 dark:text-slate-400 text-sm">
               <li>Örnek Mah. Teknoloji Cad. No:1</li>
               <li>
-                <a href="tel:+902121234567" className="hover:text-mavi-dark">+90 212 123 45 67</a>
+                <a href="tel:+902121234567" className="hover:text-mavi-dark dark:hover:text-mavi-light">+90 212 123 45 67</a>
               </li>
               <li>
-                <a href="mailto:mustafa82oner@gmail.com" className="hover:text-mavi-dark">mustafa82oner@gmail.com</a>
+                <a href="mailto:mustafa82oner@gmail.com" className="hover:text-mavi-dark dark:hover:text-mavi-light">mustafa82oner@gmail.com</a>
               </li>
             </ul>
             <div className="flex gap-3 mt-4">
@@ -71,7 +71,7 @@ export default function Footer() {
                   key={s.icon}
                   href={s.href}
                   aria-label={s.label}
-                  className="p-2 rounded-lg bg-white text-slate-500 hover:text-mavi-dark hover:bg-soft-blue/50 transition-colors"
+                  className="p-2 rounded-lg bg-white dark:bg-slate-700 text-slate-500 dark:text-slate-400 hover:text-mavi-dark dark:hover:text-mavi-light hover:bg-soft-blue/50 dark:hover:bg-slate-600 transition-colors"
                 >
                   <SocialIcon icon={s.icon} />
                 </a>
@@ -79,9 +79,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 text-sm space-y-1">
+        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 text-center text-slate-500 dark:text-slate-400 text-sm space-y-1">
           <p>© {new Date().getFullYear()} Mavi İletişim. Tüm hakları saklıdır.</p>
-          <p className="text-slate-600 font-medium">
+          <p className="text-slate-600 dark:text-slate-400 font-medium">
             Bu site demo olarak Mustafa Öner | MK Digital Systems tarafından hazırlanmıştır. Demo sürümü.
           </p>
         </div>
