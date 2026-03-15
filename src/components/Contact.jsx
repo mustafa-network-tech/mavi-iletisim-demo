@@ -22,11 +22,11 @@ const INFO = [
   },
   {
     label: 'Email',
-    value: 'info@maviiletisim.com',
+    value: 'mustafa82oner@gmail.com',
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     ),
-    href: 'mailto:info@maviiletisim.com',
+    href: 'mailto:mustafa82oner@gmail.com',
   },
 ];
 
@@ -83,23 +83,24 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            className="rounded-2xl overflow-hidden border border-slate-200 bg-soft-grey min-h-[280px] flex items-center justify-center"
+            className="rounded-2xl overflow-hidden border border-slate-200 bg-soft-grey min-h-[280px] sm:min-h-[320px]"
             initial={{ opacity: 0, x: 20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            <div className="text-center text-slate-500 p-6">
-              <svg className="w-12 h-12 mx-auto mb-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-                />
-              </svg>
-              <p className="font-medium">Harita alanı</p>
-              <p className="text-sm mt-1">Google Maps entegrasyonu buraya eklenebilir</p>
+            <div className="w-full h-full min-h-[280px] sm:min-h-[320px]">
+              <iframe
+                title="Harita — Yıldız Parkı (örnek kamu yeşil alan)"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=29.0120%2C41.0400%2C29.0320%2C41.0520&layer=mapnik&marker=41.046%2C29.022"
+                className="w-full h-full min-h-[280px] sm:min-h-[320px] border-0 block"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
+            <p className="text-xs text-slate-500 text-center py-2 bg-soft-grey border-t border-slate-200">
+              Örnek konum: Yıldız Parkı (kamu yeşil alanı) — Harita: © OpenStreetMap
+            </p>
           </motion.div>
         </div>
       </div>

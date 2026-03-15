@@ -36,3 +36,17 @@ body {
 html {
   overflow-x: hidden;
 }
+
+/* LED ticker: soldan sağa yavaş kayma */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker-scroll {
+  animation: ticker-scroll 25s linear infinite;
+}

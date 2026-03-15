@@ -62,7 +62,7 @@ export default function Footer() {
                 <a href="tel:+902121234567" className="hover:text-mavi-dark">+90 212 123 45 67</a>
               </li>
               <li>
-                <a href="mailto:info@maviiletisim.com" className="hover:text-mavi-dark">info@maviiletisim.com</a>
+                <a href="mailto:mustafa82oner@gmail.com" className="hover:text-mavi-dark">mustafa82oner@gmail.com</a>
               </li>
             </ul>
             <div className="flex gap-3 mt-4">
@@ -79,8 +79,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 text-sm">
-          © {new Date().getFullYear()} Mavi İletişim. Tüm hakları saklıdır.
+        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 text-sm space-y-1">
+          <p>© {new Date().getFullYear()} Mavi İletişim. Tüm hakları saklıdır.</p>
+          <p className="text-slate-600 font-medium">
+            Bu site demo olarak Mustafa Öner | MK Digital Systems tarafından hazırlanmıştır. Demo sürümü.
+          </p>
         </div>
       </div>
     </footer>

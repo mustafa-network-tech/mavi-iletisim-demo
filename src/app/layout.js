@@ -1,6 +1,7 @@
 import './globals.css';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import { CartProvider } from '@/components/cart/CartContext';
+import TopBar from '@/components/TopBar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -26,8 +27,9 @@ export default function RootLayout({ children }) {
     <html lang="tr" className={plusJakarta.variable}>
       <body className="min-h-screen bg-soft-white font-sans text-slate-800 antialiased">
         <CartProvider>
+          <TopBar />
           <Navbar />
-          <main>{children}</main>
+          <main className="pt-24">{children}</main>
           <Footer />
         </CartProvider>
       </body>

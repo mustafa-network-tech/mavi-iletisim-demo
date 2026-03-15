@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import LedTicker from '@/components/LedTicker';
 import Products from '@/components/Products';
 import TechnicalService from '@/components/TechnicalService';
 import About from '@/components/About';
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <LedTicker />
       <Products />
       <TechnicalService />
       <About />
