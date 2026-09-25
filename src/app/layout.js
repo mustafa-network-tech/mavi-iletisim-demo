@@ -12,14 +12,15 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+// Demo site: kept out of search results so it is never mistaken for a real shop (X-Robots-Tag in next.config.js too).
 export const metadata = {
-  title: 'MK Digital Systems | Mustafa Öner — Teknoloji, Güven ve Profesyonel Hizmet',
+  title: 'Mavi İletişim — Teknoloji Mağazası Web Sitesi Demosu | MK Digital Systems',
   description:
-    'MK Digital Systems — Teknoloji, güven ve profesyonel hizmet. Cep telefonu, bilgisayar, tablet ve network ürünleri. Teknik servis ve kurumsal destek.',
-  keywords: 'MK Digital Systems, Mustafa Öner, teknoloji, teknik servis, telefon tamiri, bilgisayar onarım, tablet, iletişim',
+    "MK Digital Systems'in teknoloji mağazaları için hazırladığı örnek web sitesi: ürün katalogu, sepet ve teknik servis talebi. Mavi İletişim gerçek bir işletme değildir.",
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
   openGraph: {
-    title: 'MK Digital Systems',
-    description: 'Teknoloji, Güven ve Profesyonel Hizmet — Mustafa Öner',
+    title: 'Mavi İletişim · Teknoloji mağazası web sitesi demosu',
+    description: 'Teknoloji mağazaları için hazırlanmış örnek web sitesi. MK Digital Systems portföy projesi.',
   },
 };
 
