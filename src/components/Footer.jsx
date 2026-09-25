@@ -1,5 +1,7 @@
 'use client';
 
+import { DEMO_CONTACT, MK_HOME } from '@/data/mk';
+
 const FOOTER_LINKS = [
   { label: 'Ana Sayfa', href: '#' },
   { label: 'Ürünler', href: '#urunler' },
@@ -58,12 +60,8 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-4">İletişim</h4>
             <ul className="space-y-3 text-slate-600 dark:text-slate-400 text-sm">
               <li>Örnek Mah. Teknoloji Cad. No:1</li>
-              <li>
-                <a href="tel:+902121234567" className="hover:text-mavi-dark dark:hover:text-mavi-light">+90 212 123 45 67</a>
-              </li>
-              <li>
-                <a href="mailto:mustafa82oner@gmail.com" className="hover:text-mavi-dark dark:hover:text-mavi-light">mustafa82oner@gmail.com</a>
-              </li>
+              <li>{DEMO_CONTACT.phone}</li>
+              <li>{DEMO_CONTACT.email}</li>
             </ul>
             <div className="flex gap-3 mt-4">
               {SOCIAL.map((s) => (
@@ -82,7 +80,8 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 text-center text-slate-500 dark:text-slate-400 text-sm space-y-1">
           <p>© {new Date().getFullYear()} Mavi İletişim. Tüm hakları saklıdır.</p>
           <p className="text-slate-600 dark:text-slate-400 font-medium">
-            Bu site demo olarak Mustafa Öner | MK Digital Systems tarafından hazırlanmıştır. Demo sürümü.
+            Gerçek bir işletme değildir · Tasarım ve geliştirme:{' '}
+            <a href={MK_HOME} className="underline hover:text-mavi-dark dark:hover:text-mavi-light">MK Digital Systems</a>
           </p>
         </div>
       </div>

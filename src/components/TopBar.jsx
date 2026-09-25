@@ -1,6 +1,6 @@
 'use client';
 
-const MK_URL = 'https://mk-digital-systems-seven.vercel.app/tr/work';
+import { MK_HOME } from '@/data/mk';
 
 /** Sample-project notice: Mavi İletişim is a fictional business built as an MK Digital Systems web design demo. */
 export default function TopBar() {
@@ -13,7 +13,7 @@ export default function TopBar() {
       <p className="hidden sm:block flex-1 min-w-0 truncate">
         Mavi İletişim gerçek bir işletme değildir; MK Digital Systems’in teknoloji mağazaları için hazırladığı bir web sitesi demosudur.
       </p>
-      <a href={MK_URL} className="shrink-0 ml-auto text-white border-b border-white/40 hover:text-[#d7b98b] hover:border-[#d7b98b]">
+      <a href={MK_HOME} className="shrink-0 ml-auto text-white border-b border-white/40 hover:text-[#d7b98b] hover:border-[#d7b98b]">
         <span className="sm:hidden">MK Digital Systems demosu ↗</span>
         <span className="hidden sm:inline">MK Digital Systems ↗</span>
       </a>
